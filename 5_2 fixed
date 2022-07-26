@@ -1,0 +1,12 @@
+maxind=0
+for i in range (1,128):
+    bini=str(bin(i)[2::])
+    if bini.count('1')%2==0:
+        bini='1'+bini+'11'
+    else:
+        bini='11'+bini+'0'
+    bini=int(bini,2)
+    if bini>maxind:
+        maxind=bini
+    
+print(maxind)    
